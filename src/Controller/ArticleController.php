@@ -21,9 +21,10 @@ class ArticleController
     /**
      * @Route("/news/{slug}");
      */
-    public function show()
+    public function show($slug)
     {
-        return new Response('Future page to show one space article!');
+        dump($slug, $this);
+        return new Response('<body>Future page to show one space article!</body>');
     }
 
 }

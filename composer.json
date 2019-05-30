@@ -6,6 +6,7 @@
         "ext-SimpleXML": "^7.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "knplabs/knp-markdown-bundle": "^1.7",
         "monolog/monolog": "^1.24",
         "sensio/framework-extra-bundle": "^5.3",
         "sensiolabs/security-checker": "^5.0",
@@ -15,6 +16,7 @@
         "symfony/framework-bundle": "4.2.*",
         "symfony/maker-bundle": "^1.11",
         "symfony/orm-pack": "^1.0",
+        "symfony/swiftmailer-bundle": "^3.2",
         "symfony/web-server-bundle": "4.2.*",
         "symfony/yaml": "4.2.*"
     },

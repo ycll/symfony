@@ -28,3 +28,5 @@ services:
     App\EventListener\ExceptionListener:
         tags:
             - { name: kernel.event_listener, event: kernel.request }
+    Monolog\Formatter\JsonFormatter: ~
+

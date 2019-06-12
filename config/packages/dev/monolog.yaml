@@ -5,6 +5,27 @@ monolog:
             path: "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
             channels: ["!event"]
+        file:
+            type: stream
+            level: debug
+            formatter: Monolog\Formatter\JsonFormatter
+#        main:
+#            type: fingers_crossed
+#            action_level: error
+#            handler:      deduplicated
+#        deduplicated:
+#            type:    deduplication
+#            handler: swift
+#        swift:
+#            type:       swift_mailer
+#            from_email: 'yincuilong@126.com'
+#            to_email:   'yiucuilong@xiaozhu.com'
+#            # or list of recipients
+#            # to_email:   ['dev1@example.com', 'dev2@example.com', ...]
+#            subject:    'An Error Occurred! %%message%%'
+#            level:      debug
+#            formatter:  monolog.formatter.html
+#            content_type: text/html
         # uncomment to get logging in your browser
         # you may have to allow bigger header sizes in your Web server configuration
         #firephp:

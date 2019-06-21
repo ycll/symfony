@@ -1,4 +1,5 @@
 {
+    "name": "ycl/the-spacebar",
     "type": "project",
     "license": "proprietary",
     "require": {
@@ -15,6 +16,7 @@
         "symfony/flex": "^1.1",
         "symfony/framework-bundle": "4.2.*",
         "symfony/maker-bundle": "^1.11",
+        "symfony/messenger": "4.2.*",
         "symfony/orm-pack": "^1.0",
         "symfony/swiftmailer-bundle": "^3.2",
         "symfony/web-server-bundle": "4.2.*",

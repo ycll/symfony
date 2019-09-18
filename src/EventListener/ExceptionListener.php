@@ -10,6 +10,6 @@ class ExceptionListener
 {
     public function onKernelRequest()
     {
-        echo 111;
+//        echo 111;
     }
 }

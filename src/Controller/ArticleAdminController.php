@@ -3,10 +3,12 @@ namespace App\Controller;
 
 
 use App\Entity\Article;
+use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Routing\Annotation\Route;
 
 class ArticleAdminController extends AbstractController
 {
@@ -15,14 +17,15 @@ class ArticleAdminController extends AbstractController
      * @Route("/admin/article/new")
      * @param EntityManagerInterface $em
      * @return object
-     * @throws \Exception
+     * @throws Exception
      */
     public function new(EntityManagerInterface $em)
     {
+        die('todo');
         $article = new Article();
         $article->setTitle('Why Asteroids Taste Like Bacon')
             ->setSlug('why-asteroids-taste-like-bacon-'.rand(100, 999))
-            ->setContext(<<<EOF
+            ->setContent(<<<EOF
 Spicy **jalapeno bacon** ipsum dolor amet veniam shank in dolore. Ham hock nisi landjaeger cow,
 lorem proident [beef ribs](https://baconipsum.com/) aute enim veniam ut cillum pork chuck picanha. Dolore reprehenderit
 labore minim pork belly spare ribs cupim short loin in. Elit exercitation eiusmod dolore cow
@@ -42,13 +45,15 @@ EOF
 
 
         if (rand(1, 10) > 2) {
-            $article->setPublishedAt(new \DateTime(sprintf('-%d days', rand(1, 100))));
+            $article->setPublishedAt(new DateTime(sprintf('-%d days', rand(1, 100))));
         }
 
-        $article->setAuthor('Mike Ferengi')
+        $article
+            ->setAuthor('Mike Ferengi')
             ->setHeartCount(rand(5, 100))
-            ->setCreateAt(new \DateTime(sprintf('-%d days', rand(1, 100))))
-            ->setUpdateAt(new \DateTime(sprintf('-%d days', rand(1, 100))));
+            ->setImageFilename('asteroid.jepg');
+//            ->setCreateAt(new \DateTime(sprintf('-%d days', rand(1, 100))))
+//            ->setUpdateAt(new \DateTime(sprintf('-%d days', rand(1, 100))));
 
         $em->persist($article);
         $em->flush();

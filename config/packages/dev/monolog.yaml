@@ -5,6 +5,11 @@ monolog:
             path: "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
             channels: ["!event"]
+        markdown:
+            type: stream
+            path: "%kernel.project_dir%/../%kernel.environment%/markdown.log"
+            level: debug
+            channels: ["markdown"]
         file:
             type: stream
             level: debug

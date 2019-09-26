@@ -1,0 +1,4 @@
+knpu_lorem_ipsum:
+    min_sunshine: 5
+    unicorns_are_real: false
+    word_provider: App\Service\CustomWordProvider

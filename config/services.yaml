@@ -40,5 +40,5 @@ services:
 #    App\Service\MarkDownHelper:
 #        arguments:
 #            $logger: '@monolog.logger.markdown'
-    KnpU\LoremIpsumBundle\KnpUIpsum: ~
+#    KnpU\LoremIpsumBundle\KnpUIpsum: ~
 
